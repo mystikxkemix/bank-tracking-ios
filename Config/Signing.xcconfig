@@ -1,0 +1,4 @@
+// Signing team kept out of git. To build on a device, create Config/Signing.local.xcconfig with:
+//   DEVELOPMENT_TEAM = <your team id>
+// The file is git-ignored; without it the project still builds for the simulator.
+#include? "Signing.local.xcconfig"

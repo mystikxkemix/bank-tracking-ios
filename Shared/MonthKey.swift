@@ -31,11 +31,6 @@ struct MonthKey: Hashable, Comparable, Identifiable {
         return MonthKey(year: components.year ?? 2000, month: components.month ?? 1)
     }
 
-    /// Month the screens open on: the current one (or a debug override for screenshots).
-    static var initial: MonthKey {
-        DebugLaunch.month ?? current()
-    }
-
     func adding(_ months: Int) -> MonthKey {
         let index: Int = year * 12 + (month - 1) + months
         return MonthKey(year: index / 12, month: index % 12 + 1)

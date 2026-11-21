@@ -49,6 +49,15 @@ enum DebugLaunch {
         #endif
     }
 
+    /// "1" opens a screen that renders the widget with the real loader (to check it without a home screen).
+    static var widgetPreview: Bool {
+        #if DEBUG
+        return ProcessInfo.processInfo.environment["BT_WIDGET"] == "1"
+        #else
+        return false
+        #endif
+    }
+
     /// Initial segment of the budgets tab: "goals" to open the goals list.
     static var segment: String? {
         #if DEBUG
@@ -56,5 +65,12 @@ enum DebugLaunch {
         #else
         return nil
         #endif
+    }
+}
+
+extension MonthKey {
+    /// Month the screens open on: the current one (or a debug override for screenshots).
+    static var initial: MonthKey {
+        DebugLaunch.month ?? current()
     }
 }

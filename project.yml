@@ -13,10 +13,23 @@ targets:
       Release: Config/Signing.xcconfig
     sources:
       - BankTracking
+      - Shared
+    dependencies:
+      - target: BankTrackingWidget
+        embed: true
+        codeSign: true
+    entitlements:
+      path: BankTracking/BankTracking.entitlements
+      properties:
+        # Shared with the widget (SharedStore): server address, space, session token.
+        # A Keychain group works with the team's wildcard development profile, an App Group does not.
+        keychain-access-groups:
+          - $(AppIdentifierPrefix)io.github.mystikxkemix.banktracking.shared
     info:
       path: BankTracking/Info.plist
       properties:
         CFBundleDisplayName: Comptes
+        SharedKeychainGroup: $(AppIdentifierPrefix)io.github.mystikxkemix.banktracking.shared
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         UILaunchScreen: {}
@@ -38,6 +51,40 @@ targets:
         CURRENT_PROJECT_VERSION: "1"
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+  BankTrackingWidget:
+    type: app-extension
+    platform: iOS
+    configFiles:
+      Debug: Config/Signing.xcconfig
+      Release: Config/Signing.xcconfig
+    sources:
+      - BankTrackingWidget
+      - Shared
+    entitlements:
+      path: BankTrackingWidget/BankTrackingWidget.entitlements
+      properties:
+        keychain-access-groups:
+          - $(AppIdentifierPrefix)io.github.mystikxkemix.banktracking.shared
+    info:
+      path: BankTrackingWidget/Info.plist
+      properties:
+        CFBundleDisplayName: Comptes
+        SharedKeychainGroup: $(AppIdentifierPrefix)io.github.mystikxkemix.banktracking.shared
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+    settings:
+      base:
+        # Nested under the app's bundle id, as an extension must be.
+        PRODUCT_BUNDLE_IDENTIFIER: io.github.mystikxkemix.banktracking.widget
+        TARGETED_DEVICE_FAMILY: "1"
+        SWIFT_VERSION: "5.0"
+        CODE_SIGN_STYLE: Automatic
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
   BankTrackingTests:
     type: bundle.unit-test
     platform: iOS

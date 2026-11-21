@@ -2,7 +2,7 @@ import SwiftUI
 
 struct LoginView: View {
     @Environment(SessionStore.self) private var session: SessionStore
-    @State private var server: String = UserDefaults.standard.string(forKey: "serverURL") ?? ""
+    @State private var server: String = SharedStore.serverURL ?? ""
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var error: String?

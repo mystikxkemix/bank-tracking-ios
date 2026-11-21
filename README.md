@@ -24,6 +24,11 @@ xcodebuild -project BankTracking.xcodeproj -scheme BankTracking \
   -destination 'platform=iOS Simulator,name=iPhone 17' test
 ```
 
+## Widget
+"Épargne du mois" (home screen small, lock screen rectangular): savings of the current month and what is
+left of the budgets. It calls the API itself every hour with the session shared by the app, and shows the
+last known figures (clock icon) when the server is unreachable. Amounts are hidden while the phone is locked.
+
 ## How it talks to the server
 - Same API as the web app (`/api/...`), JSON shapes copied from `packages/shared/src/schemas` into `BankTracking/API/Models.swift`.
 - Login with email + password; the session is the `bt_session` cookie, kept by `HTTPCookieStorage` across launches.
@@ -39,6 +44,7 @@ Debug builds read these environment variables, release builds ignore them:
 | `BT_SEGMENT` | `goals` to open the goals list |
 | `BT_SPACE` | space name to open, e.g. `Foyer` |
 | `BT_MONTH` | month to open, `YYYY-MM` |
+| `BT_WIDGET` | `1` shows a screen that runs the widget loader and draws the widget |
 
 ```sh
 SIMCTL_CHILD_BT_SERVER=http://localhost:8095 SIMCTL_CHILD_BT_EMAIL=alex@demo.local \

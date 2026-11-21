@@ -26,17 +26,29 @@ enum APIError: LocalizedError, Equatable {
     }
 }
 
-/// Thin JSON client over `/api`. The session lives in the `bt_session` cookie, kept by
-/// `HTTPCookieStorage.shared`: it survives app restarts because the server gives it a max age.
+/// Thin JSON client over `/api`. The session lives in the `bt_session` cookie:
+/// - in the app, `HTTPCookieStorage.shared` keeps it (it survives restarts, the server gives it a max age);
+/// - in the widget, there is no shared cookie jar, so the token copied in `SharedStore` is sent by hand.
 final class APIClient {
+    static let sessionCookieName: String = "bt_session"
+
     let baseURL: URL
     private let session: URLSession
+    /// Set in the widget only: sent as the `bt_session` cookie on every request.
+    private let sessionToken: String?
     private let decoder: JSONDecoder = JSONDecoder()
     private let encoder: JSONEncoder = JSONEncoder()
 
-    init(baseURL: URL, session: URLSession = .shared) {
+    init(baseURL: URL, session: URLSession = .shared, sessionToken: String? = nil) {
         self.baseURL = baseURL
         self.session = session
+        self.sessionToken = sessionToken
+    }
+
+    /// Current value of the session cookie for this server (after login), to share with the widget.
+    var storedSessionToken: String? {
+        session.configuration.httpCookieStorage?.cookies(for: baseURL)?
+            .first { (cookie: HTTPCookie) -> Bool in cookie.name == APIClient.sessionCookieName }?.value
     }
 
     /// Builds `<base>/api<path>?query`. Keeps any path prefix of the base URL (reverse proxy sub-path).
@@ -78,13 +90,18 @@ final class APIClient {
 
     /// Forgets the session cookie of this server.
     func clearCookies() {
-        let storage: HTTPCookieStorage = HTTPCookieStorage.shared
+        guard let storage: HTTPCookieStorage = session.configuration.httpCookieStorage else { return }
         for cookie in storage.cookies(for: baseURL) ?? [] {
             storage.deleteCookie(cookie)
         }
     }
 
-    private func send(_ request: URLRequest) async throws -> Data {
+    private func send(_ original: URLRequest) async throws -> Data {
+        var request: URLRequest = original
+        if let token: String = sessionToken {
+            request.httpShouldHandleCookies = false
+            request.setValue("\(APIClient.sessionCookieName)=\(token)", forHTTPHeaderField: "Cookie")
+        }
         let data: Data
         let response: URLResponse
         do {

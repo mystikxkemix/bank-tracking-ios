@@ -42,7 +42,11 @@ struct RootView: View {
             case .signedOut:
                 LoginView()
             case .signedIn:
-                MainTabView()
+                if DebugLaunch.widgetPreview {
+                    WidgetPreviewScreen()
+                } else {
+                    MainTabView()
+                }
             }
         }
         .task {

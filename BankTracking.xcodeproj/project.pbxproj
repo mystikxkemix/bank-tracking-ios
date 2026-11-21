@@ -7,32 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00DC077AB2C54DC540D2C0AB /* WidgetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3CE6005F96FF455DF6DFA6 /* WidgetViews.swift */; };
 		05072C4C835D794CF62B25A9 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53373EBFF516034F35B4855D /* DashboardView.swift */; };
 		0ADA761962DB0F2F2C12947F /* AmountText.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA57922024EB89FBC7B03F6F /* AmountText.swift */; };
-		10ACD8823FFD042435D10546 /* BankAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F53E510960D3956A2DEB2 /* BankAPI.swift */; };
-		1D1BFA0F5D93DB199A8643DC /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F3B153558227F144C2976 /* APIClient.swift */; };
+		1BBF1B43F6D3D894A4785B13 /* MonthKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6733E9138A9AAC47226975 /* MonthKey.swift */; };
 		1D6D470F3B9CA45F3510312C /* MonthSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E402237F37CC367A3ADFEE21 /* MonthSwitcher.swift */; };
+		209B6D997A8AF8C7018E8B9B /* MonthKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6733E9138A9AAC47226975 /* MonthKey.swift */; };
+		2FFD59C5B6114E4EA555608F /* BankTrackingWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 74FB2AA03B98DB3CAD4CD65C /* BankTrackingWidget.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		34A240704022BF62CD7D2768 /* LoadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F20FEC66D1EABDCEBCFFE /* LoadState.swift */; };
 		38524134A106750268C7590A /* SplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3C17F7BFE4442C371D9FED /* SplitView.swift */; };
-		4B16FED4F72DC2B361CD9319 /* MonthKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584D07C3B7781A19E690F477 /* MonthKey.swift */; };
+		3C798288DCF636761F530BAC /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CDBF60328A8B0712C96BF4 /* APIClient.swift */; };
+		3E3BFCE87E6D31DBE0445036 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD52A0F0DA863802DBB16381 /* Models.swift */; };
+		566243BE38ABE7E4D1BD00FD /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4843C22E0AFEACF301BDBAB3 /* SharedStore.swift */; };
 		5899F5657C33EE80D1605960 /* AppLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A0A4CA09FCB621E03D089A /* AppLock.swift */; };
 		5A2821552AA06C6E55ABB578 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D833B1FDB2199AA710AFA7 /* TransactionsView.swift */; };
 		6D1AEF436AE6E4A108A5C0B4 /* CategoryColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A2B7C53098F3EC4C58DBD /* CategoryColor.swift */; };
 		6E0703DAD147C5A5F01EBF8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55486DED1E3A3EB1582CE026 /* Assets.xcassets */; };
+		6F8F056157A41FD9D3CF5EE5 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81385FEC3F6130498AF5B1D /* Money.swift */; };
+		7A9CF668A731A42E848286F4 /* BankTrackingWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBCDEBA7A9A9DC8CE588ED7 /* BankTrackingWidget.swift */; };
 		7C0B4DE18AE3F05124D795FC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D524D3D41A81C5BA648451A /* SettingsView.swift */; };
+		86F6E57AD4D9F94A3DBD998B /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD52A0F0DA863802DBB16381 /* Models.swift */; };
+		8B8DA817FFA5FD7F5AC1D78B /* WidgetSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6626E085761F90BB5C000FB /* WidgetSnapshotTests.swift */; };
 		9C3F0D6EC12F9D9FA8DEEA2C /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC62010C2B8015DBF5E936C /* SessionStore.swift */; };
+		9ED0C5DB8EDAEDC2B2E59CCE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CDBF60328A8B0712C96BF4 /* APIClient.swift */; };
 		9F24748336F96CD3D6F65A76 /* DecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D886B255977288AC3CF54F73 /* DecodingTests.swift */; };
+		9F6BE4FB344B4EFA2102A2EB /* BankAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308492ABE2B1E267291A55A6 /* BankAPI.swift */; };
+		9F9BF2669CB3FFDC87910E70 /* WidgetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3CE6005F96FF455DF6DFA6 /* WidgetViews.swift */; };
 		A163C11BD91CD5025468C850 /* BudgetsGoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963BDB76300D497CD2D220C6 /* BudgetsGoalsView.swift */; };
 		A464DCC88377D035DB99E434 /* DebugLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC09B63E42D242843BB3B856 /* DebugLaunch.swift */; };
 		AE65E2886C2A18B1DD9945B6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C12BB58067D5040EE6E51 /* LoginView.swift */; };
 		B3481A3F6E8B1455316070CB /* MoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A75BFCA4CE8A3E92E7806E8 /* MoneyTests.swift */; };
-		CB1538D11EE495A3331042CA /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492CF9AAFB88AFD5A1A4CBF /* Models.swift */; };
-		D55C2D62D69F4CCDABABFDCB /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434A733C554929B992ACD98 /* Money.swift */; };
+		B4255632C7C9D59CD9C84510 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81385FEC3F6130498AF5B1D /* Money.swift */; };
+		B548071847AE519E0096EA10 /* BankAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308492ABE2B1E267291A55A6 /* BankAPI.swift */; };
+		CE7069AC5C50C5029453C198 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4843C22E0AFEACF301BDBAB3 /* SharedStore.swift */; };
 		E162CF0FA87712B16BB61107 /* BankTrackingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D208F86B981F4291CC61442 /* BankTrackingApp.swift */; };
+		F83F86DD1E9073E98B5FF91B /* WidgetPreviewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D09A0BB892E22885F6249 /* WidgetPreviewScreen.swift */; };
 		FD90A9789BCAD882F11CC3E5 /* MonthKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6CA5D1742739017AE9B876 /* MonthKeyTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0C2FB3B96CEBDDA2BE17DEA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B4AF627FBF78D8DBF880449 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9357C7AF8259C945BECAF007;
+			remoteInfo = BankTrackingWidget;
+		};
 		8E129647D9EA3B1AA178F729 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9B4AF627FBF78D8DBF880449 /* Project object */;
@@ -42,34 +62,57 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		481978ACDC75E454A69CD52D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2FFD59C5B6114E4EA555608F /* BankTrackingWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0CD501FC49016007AF3CA304 /* Signing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Signing.xcconfig; sourceTree = "<group>"; };
-		1434A733C554929B992ACD98 /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
 		188A2B7C53098F3EC4C58DBD /* CategoryColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryColor.swift; sourceTree = "<group>"; };
 		1D3C17F7BFE4442C371D9FED /* SplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitView.swift; sourceTree = "<group>"; };
-		1D4F3B153558227F144C2976 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		1EC62010C2B8015DBF5E936C /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
-		2492CF9AAFB88AFD5A1A4CBF /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		308492ABE2B1E267291A55A6 /* BankAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAPI.swift; sourceTree = "<group>"; };
 		3C6CA5D1742739017AE9B876 /* MonthKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthKeyTests.swift; sourceTree = "<group>"; };
+		4843C22E0AFEACF301BDBAB3 /* SharedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStore.swift; sourceTree = "<group>"; };
 		53373EBFF516034F35B4855D /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		5403EE4283FE311B7EBE0BDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		55486DED1E3A3EB1582CE026 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		584D07C3B7781A19E690F477 /* MonthKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthKey.swift; sourceTree = "<group>"; };
-		5A7F53E510960D3956A2DEB2 /* BankAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAPI.swift; sourceTree = "<group>"; };
+		58264798BA4814F40ADD357C /* BankTrackingWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BankTrackingWidget.entitlements; sourceTree = "<group>"; };
 		61D833B1FDB2199AA710AFA7 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
 		656B732F7005F376E7A00F3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6D208F86B981F4291CC61442 /* BankTrackingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTrackingApp.swift; sourceTree = "<group>"; };
+		74FB2AA03B98DB3CAD4CD65C /* BankTrackingWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = BankTrackingWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A0A4CA09FCB621E03D089A /* AppLock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLock.swift; sourceTree = "<group>"; };
 		7A75BFCA4CE8A3E92E7806E8 /* MoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTests.swift; sourceTree = "<group>"; };
 		7D524D3D41A81C5BA648451A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8CB7CBA83E17F20AE8214718 /* BankTracking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BankTracking.entitlements; sourceTree = "<group>"; };
+		95CDBF60328A8B0712C96BF4 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		963BDB76300D497CD2D220C6 /* BudgetsGoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsGoalsView.swift; sourceTree = "<group>"; };
 		9CC89806C473184B671240BB /* BankTrackingTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = BankTrackingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DBCDEBA7A9A9DC8CE588ED7 /* BankTrackingWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTrackingWidget.swift; sourceTree = "<group>"; };
 		AA57922024EB89FBC7B03F6F /* AmountText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountText.swift; sourceTree = "<group>"; };
+		AD52A0F0DA863802DBB16381 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		B81385FEC3F6130498AF5B1D /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
 		BC519751CACAA7177C84BB0B /* BankTracking.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = BankTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C73C12BB58067D5040EE6E51 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D6626E085761F90BB5C000FB /* WidgetSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSnapshotTests.swift; sourceTree = "<group>"; };
 		D886B255977288AC3CF54F73 /* DecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingTests.swift; sourceTree = "<group>"; };
 		DA7F20FEC66D1EABDCEBCFFE /* LoadState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadState.swift; sourceTree = "<group>"; };
 		DC09B63E42D242843BB3B856 /* DebugLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLaunch.swift; sourceTree = "<group>"; };
+		DD3CE6005F96FF455DF6DFA6 /* WidgetViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetViews.swift; sourceTree = "<group>"; };
+		DD6733E9138A9AAC47226975 /* MonthKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthKey.swift; sourceTree = "<group>"; };
 		E402237F37CC367A3ADFEE21 /* MonthSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSwitcher.swift; sourceTree = "<group>"; };
+		F12D09A0BB892E22885F6249 /* WidgetPreviewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetPreviewScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -78,8 +121,7 @@
 			children = (
 				188A2B7C53098F3EC4C58DBD /* CategoryColor.swift */,
 				DC09B63E42D242843BB3B856 /* DebugLaunch.swift */,
-				1434A733C554929B992ACD98 /* Money.swift */,
-				584D07C3B7781A19E690F477 /* MonthKey.swift */,
+				F12D09A0BB892E22885F6249 /* WidgetPreviewScreen.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -98,6 +140,7 @@
 				D886B255977288AC3CF54F73 /* DecodingTests.swift */,
 				7A75BFCA4CE8A3E92E7806E8 /* MoneyTests.swift */,
 				3C6CA5D1742739017AE9B876 /* MonthKeyTests.swift */,
+				D6626E085761F90BB5C000FB /* WidgetSnapshotTests.swift */,
 			);
 			path = BankTrackingTests;
 			sourceTree = "<group>";
@@ -107,6 +150,7 @@
 			children = (
 				BC519751CACAA7177C84BB0B /* BankTracking.app */,
 				9CC89806C473184B671240BB /* BankTrackingTests.xctest */,
+				74FB2AA03B98DB3CAD4CD65C /* BankTrackingWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,16 +163,6 @@
 				E402237F37CC367A3ADFEE21 /* MonthSwitcher.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		64D4A0315B187F8D220D482A /* API */ = {
-			isa = PBXGroup;
-			children = (
-				1D4F3B153558227F144C2976 /* APIClient.swift */,
-				5A7F53E510960D3956A2DEB2 /* BankAPI.swift */,
-				2492CF9AAFB88AFD5A1A4CBF /* Models.swift */,
-			);
-			path = API;
 			sourceTree = "<group>";
 		};
 		68217BF931CAD2B0D463ABA0 /* Session */ = {
@@ -161,9 +195,21 @@
 			children = (
 				D1DBFC8E27A174918B019CAA /* BankTracking */,
 				3F7FA53D24763F80F85E698C /* BankTrackingTests */,
+				C5B5368D5C72E5EEBA28381B /* BankTrackingWidget */,
 				79AE4DFCEC03851D017FCDAA /* Config */,
+				DB71AB02BB38D99A0AC709CF /* Shared */,
 				4A15BB26B34430D13DA34638 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		C5B5368D5C72E5EEBA28381B /* BankTrackingWidget */ = {
+			isa = PBXGroup;
+			children = (
+				58264798BA4814F40ADD357C /* BankTrackingWidget.entitlements */,
+				9DBCDEBA7A9A9DC8CE588ED7 /* BankTrackingWidget.swift */,
+				5403EE4283FE311B7EBE0BDD /* Info.plist */,
+			);
+			path = BankTrackingWidget;
 			sourceTree = "<group>";
 		};
 		C8BD24C2EA9CD31EC9DB82C8 /* Split */ = {
@@ -191,8 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				55486DED1E3A3EB1582CE026 /* Assets.xcassets */,
+				8CB7CBA83E17F20AE8214718 /* BankTracking.entitlements */,
 				656B732F7005F376E7A00F3E /* Info.plist */,
-				64D4A0315B187F8D220D482A /* API */,
 				7AC2481649D1978EF53E604A /* App */,
 				4B35BC11B46BB0269791FF1D /* Components */,
 				D08AE9DAD477E4149C9673C3 /* Features */,
@@ -200,6 +246,20 @@
 				16A7D9E8F6575A936D26D466 /* Support */,
 			);
 			path = BankTracking;
+			sourceTree = "<group>";
+		};
+		DB71AB02BB38D99A0AC709CF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				95CDBF60328A8B0712C96BF4 /* APIClient.swift */,
+				308492ABE2B1E267291A55A6 /* BankAPI.swift */,
+				AD52A0F0DA863802DBB16381 /* Models.swift */,
+				B81385FEC3F6130498AF5B1D /* Money.swift */,
+				DD6733E9138A9AAC47226975 /* MonthKey.swift */,
+				4843C22E0AFEACF301BDBAB3 /* SharedStore.swift */,
+				DD3CE6005F96FF455DF6DFA6 /* WidgetViews.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		DFDD7392774817FB0305D05F /* Settings */ = {
@@ -255,16 +315,35 @@
 			productReference = 9CC89806C473184B671240BB /* BankTrackingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		9357C7AF8259C945BECAF007 /* BankTrackingWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56E07A1FE98CBAD9088E7BF7 /* Build configuration list for PBXNativeTarget "BankTrackingWidget" */;
+			buildPhases = (
+				274F44670A442832762795DF /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BankTrackingWidget;
+			packageProductDependencies = (
+			);
+			productName = BankTrackingWidget;
+			productReference = 74FB2AA03B98DB3CAD4CD65C /* BankTrackingWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		9C1D24DCB9A327288C18121C /* BankTracking */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 726D8AA3FD980B58654276F2 /* Build configuration list for PBXNativeTarget "BankTracking" */;
 			buildPhases = (
 				82551564D9958BF6CD44BB95 /* Sources */,
 				6FBE86DDC7447C5E9F2A2260 /* Resources */,
+				481978ACDC75E454A69CD52D /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				982F8163F28EFFEDCAA767FB /* PBXTargetDependency */,
 			);
 			name = BankTracking;
 			packageProductDependencies = (
@@ -282,6 +361,9 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					9357C7AF8259C945BECAF007 = {
+						ProvisioningStyle = Automatic;
+					};
 					9C1D24DCB9A327288C18121C = {
 						ProvisioningStyle = Automatic;
 					};
@@ -302,6 +384,7 @@
 			projectRoot = "";
 			targets = (
 				9C1D24DCB9A327288C18121C /* BankTracking */,
+				9357C7AF8259C945BECAF007 /* BankTrackingWidget */,
 				1EE52CA15D56FD2184B69193 /* BankTrackingTests */,
 			);
 		};
@@ -319,14 +402,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		274F44670A442832762795DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ED0C5DB8EDAEDC2B2E59CCE /* APIClient.swift in Sources */,
+				9F6BE4FB344B4EFA2102A2EB /* BankAPI.swift in Sources */,
+				7A9CF668A731A42E848286F4 /* BankTrackingWidget.swift in Sources */,
+				3E3BFCE87E6D31DBE0445036 /* Models.swift in Sources */,
+				6F8F056157A41FD9D3CF5EE5 /* Money.swift in Sources */,
+				209B6D997A8AF8C7018E8B9B /* MonthKey.swift in Sources */,
+				CE7069AC5C50C5029453C198 /* SharedStore.swift in Sources */,
+				9F9BF2669CB3FFDC87910E70 /* WidgetViews.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82551564D9958BF6CD44BB95 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D1BFA0F5D93DB199A8643DC /* APIClient.swift in Sources */,
+				3C798288DCF636761F530BAC /* APIClient.swift in Sources */,
 				0ADA761962DB0F2F2C12947F /* AmountText.swift in Sources */,
 				5899F5657C33EE80D1605960 /* AppLock.swift in Sources */,
-				10ACD8823FFD042435D10546 /* BankAPI.swift in Sources */,
+				B548071847AE519E0096EA10 /* BankAPI.swift in Sources */,
 				E162CF0FA87712B16BB61107 /* BankTrackingApp.swift in Sources */,
 				A163C11BD91CD5025468C850 /* BudgetsGoalsView.swift in Sources */,
 				6D1AEF436AE6E4A108A5C0B4 /* CategoryColor.swift in Sources */,
@@ -334,14 +432,17 @@
 				A464DCC88377D035DB99E434 /* DebugLaunch.swift in Sources */,
 				34A240704022BF62CD7D2768 /* LoadState.swift in Sources */,
 				AE65E2886C2A18B1DD9945B6 /* LoginView.swift in Sources */,
-				CB1538D11EE495A3331042CA /* Models.swift in Sources */,
-				D55C2D62D69F4CCDABABFDCB /* Money.swift in Sources */,
-				4B16FED4F72DC2B361CD9319 /* MonthKey.swift in Sources */,
+				86F6E57AD4D9F94A3DBD998B /* Models.swift in Sources */,
+				B4255632C7C9D59CD9C84510 /* Money.swift in Sources */,
+				1BBF1B43F6D3D894A4785B13 /* MonthKey.swift in Sources */,
 				1D6D470F3B9CA45F3510312C /* MonthSwitcher.swift in Sources */,
 				9C3F0D6EC12F9D9FA8DEEA2C /* SessionStore.swift in Sources */,
 				7C0B4DE18AE3F05124D795FC /* SettingsView.swift in Sources */,
+				566243BE38ABE7E4D1BD00FD /* SharedStore.swift in Sources */,
 				38524134A106750268C7590A /* SplitView.swift in Sources */,
 				5A2821552AA06C6E55ABB578 /* TransactionsView.swift in Sources */,
+				F83F86DD1E9073E98B5FF91B /* WidgetPreviewScreen.swift in Sources */,
+				00DC077AB2C54DC540D2C0AB /* WidgetViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,12 +453,18 @@
 				9F24748336F96CD3D6F65A76 /* DecodingTests.swift in Sources */,
 				B3481A3F6E8B1455316070CB /* MoneyTests.swift in Sources */,
 				FD90A9789BCAD882F11CC3E5 /* MonthKeyTests.swift in Sources */,
+				8B8DA817FFA5FD7F5AC1D78B /* WidgetSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		982F8163F28EFFEDCAA767FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9357C7AF8259C945BECAF007 /* BankTrackingWidget */;
+			targetProxy = 0C2FB3B96CEBDDA2BE17DEA0 /* PBXContainerItemProxy */;
+		};
 		D6E207F4AEEDAB13CF04169C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9C1D24DCB9A327288C18121C /* BankTracking */;
@@ -372,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BankTracking/BankTracking.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -507,6 +615,27 @@
 			};
 			name = Debug;
 		};
+		74A95A71424C7445C2E98698 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CD501FC49016007AF3CA304 /* Signing.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BankTrackingWidget/BankTrackingWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = BankTrackingWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.mystikxkemix.banktracking.widget;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
 		75F1B4564B7D95A7158ED7F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -517,7 +646,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.mystikxkemix.banktracking.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.mystikxkemix.BankTrackingTests;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -535,7 +664,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.mystikxkemix.banktracking.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.mystikxkemix.BankTrackingTests;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -543,12 +672,34 @@
 			};
 			name = Debug;
 		};
+		D4BE79CFF66A1EC1B0CAD5B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CD501FC49016007AF3CA304 /* Signing.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BankTrackingWidget/BankTrackingWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = BankTrackingWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.mystikxkemix.banktracking.widget;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		E5B13B4DC06011ADF9A517A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0CD501FC49016007AF3CA304 /* Signing.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BankTracking/BankTracking.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -568,6 +719,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		56E07A1FE98CBAD9088E7BF7 /* Build configuration list for PBXNativeTarget "BankTrackingWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74A95A71424C7445C2E98698 /* Debug */,
+				D4BE79CFF66A1EC1B0CAD5B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		65354D201A28A9C8AAB48830 /* Build configuration list for PBXProject "BankTracking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

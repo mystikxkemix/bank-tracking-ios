@@ -29,6 +29,8 @@
 	</dict>
 	<key>NSFaceIDUsageDescription</key>
 	<string>Face ID verrouille l'app pour protéger tes comptes.</string>
+	<key>SharedKeychainGroup</key>
+	<string>$(AppIdentifierPrefix)io.github.mystikxkemix.banktracking.shared</string>
 	<key>UILaunchScreen</key>
 	<dict/>
 	<key>UISupportedInterfaceOrientations</key>

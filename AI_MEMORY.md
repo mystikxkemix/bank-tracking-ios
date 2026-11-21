@@ -9,6 +9,14 @@
 - Space-scoped routes: `/api/spaces/:spaceId/<feature>`. Transactions come newest first, which the day grouping relies on.
 - `/api/health` returns `{ ok, version }` since server 1.8 (shown in Réglages).
 
+## App and widget sharing
+- `Shared/` is compiled into both the app and the `BankTrackingWidget` extension (API client, models, money, months, widget views).
+- App and widget share data through a **Keychain access group** (`SharedStore`), NOT an App Group: this Mac has no Apple
+  account in Xcode, and the team's wildcard development profile refuses App Groups but allows any `<TeamID>.*` Keychain group.
+- The group name reaches Swift through the Info.plist key `SharedKeychainGroup = $(AppIdentifierPrefix)...shared`.
+- The widget has no cookie jar: the app copies the `bt_session` cookie value to the Keychain after login and on every launch;
+  `APIClient(sessionToken:)` sends it as a `Cookie` header. Logout / 401 clears it, then the widget says "Ouvre Comptes".
+
 ## Gotchas
 - iOS 26 large titles disappear under a `safeAreaInset` header: the Budgets tab uses an inline title for that reason.
 - `@Environment` is used in a plain `View` (`SpaceMenuButton`) placed inside `ToolbarItem`, not in a `ToolbarContent` struct.

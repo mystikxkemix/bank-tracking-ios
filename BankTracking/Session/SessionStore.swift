@@ -1,5 +1,6 @@
 import Foundation
 import Observation
+import WidgetKit
 
 /// App-wide session: server address, logged-in user, spaces and the per-space reference data
 /// (categories, accounts) that every screen needs to show names instead of ids.
@@ -20,25 +21,21 @@ final class SessionStore {
     /// Shown on the login screen after an automatic sign-out (expired session).
     var notice: String?
 
+    /// Stored in the App Group so the widget shows the same space.
     var selectedSpaceId: String? {
-        didSet { UserDefaults.standard.set(selectedSpaceId, forKey: Keys.space) }
+        didSet { SharedStore.selectedSpaceId = selectedSpaceId }
     }
 
     var serverURL: String {
-        UserDefaults.standard.string(forKey: Keys.server) ?? ""
+        SharedStore.serverURL ?? ""
     }
 
     var selectedSpace: Space? {
         spaces.first { (space: Space) -> Bool in space.id == selectedSpaceId }
     }
 
-    private enum Keys {
-        static let server: String = "serverURL"
-        static let space: String = "selectedSpaceId"
-    }
-
     init() {
-        selectedSpaceId = UserDefaults.standard.string(forKey: Keys.space)
+        selectedSpaceId = SharedStore.selectedSpaceId
     }
 
     /// Restores the previous session from the saved server and the stored cookie.
@@ -52,6 +49,8 @@ final class SessionStore {
         do {
             let status: AuthStatus = try await client.authStatus()
             if let user: CurrentUser = status.user {
+                // Re-share the token on every launch: the widget may have dropped it (expired session).
+                SharedStore.sessionToken = client.storedSessionToken
                 try await enter(user: user)
             } else {
                 phase = .signedOut
@@ -77,28 +76,35 @@ final class SessionStore {
         guard let user: CurrentUser = after.user else {
             throw APIError.unauthorized
         }
-        UserDefaults.standard.set(url.absoluteString, forKey: Keys.server)
+        SharedStore.serverURL = url.absoluteString
+        SharedStore.sessionToken = client.storedSessionToken
         self.client = client
         notice = nil
         try await enter(user: user)
+        WidgetCenter.shared.reloadAllTimelines()
     }
 
     func logout() async {
         try? await client?.logout()
         client?.clearCookies()
+        SharedStore.clearSession()
         reset()
+        WidgetCenter.shared.reloadAllTimelines()
     }
 
     func selectSpace(_ id: String) async {
         selectedSpaceId = id
         await loadReferenceData()
+        WidgetCenter.shared.reloadAllTimelines()
     }
 
     /// Every screen funnels its errors here: an expired session sends the user back to login.
     func handle(_ error: Error) -> String {
         if let apiError: APIError = error as? APIError, apiError == .unauthorized {
             client?.clearCookies()
+            SharedStore.clearSession()
             reset()
+            WidgetCenter.shared.reloadAllTimelines()
             notice = apiError.localizedDescription
         }
         return error.localizedDescription
